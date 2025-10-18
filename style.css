@@ -69,7 +69,6 @@ ul li:hover{color:#00ffff;transform:scale(1.05);transition:all 0.4s ease;}
   font-size: 1.1em;
 }
 
-/* Colors per team */
 .neutral {
   background: rgba(180, 180, 180, 0.15);
   border: 1px solid rgba(200,200,200,0.3);
@@ -151,3 +150,4 @@ ul li:hover{color:#00ffff;transform:scale(1.05);transition:all 0.4s ease;}
 
 @keyframes pulse{0%,100%{opacity:0.3;}50%{opacity:1;}}
 @media(max-width:768px){h1{font-size:2.2rem;}ul{font-size:1.2rem;}}
+
