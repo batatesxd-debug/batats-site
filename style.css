@@ -23,5 +23,131 @@ ul{list-style-type:disc;margin-left:1.5rem;font-size:1.4rem;line-height:1.8;colo
 ul li{margin-bottom:1rem;opacity:0;transform:translateX(-30px);}
 ul li:hover{color:#00ffff;transform:scale(1.05);transition:all 0.4s ease;}
 .hint{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-size:1rem;color:#aaa;opacity:0.9;animation:pulse 1.5s infinite;text-shadow:0 0 12px #00ffff33;}
+.cyber-teams {
+  text-align: center;
+  color: white;
+  padding: 80px 50px;
+}
+
+.cyber-teams h1 {
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.box {
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(255,255,255,0.3);
+}
+
+.box h2 {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  padding-bottom: 8px;
+}
+
+.box ul {
+  list-style-type: disc;
+  text-align: left;
+  padding-left: 20px;
+  line-height: 1.7;
+  font-size: 1.1em;
+}
+
+/* Colors per team */
+.neutral {
+  background: rgba(180, 180, 180, 0.15);
+  border: 1px solid rgba(200,200,200,0.3);
+  backdrop-filter: blur(10px);
+}
+
+.red {
+  background: rgba(255, 60, 60, 0.15);
+  border: 1px solid rgba(255, 60, 60, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.blue {
+  background: rgba(60, 120, 255, 0.15);
+  border: 1px solid rgba(60, 120, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.purple {
+  background: rgba(150, 60, 255, 0.15);
+  border: 1px solid rgba(150, 60, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+.feedback-box {
+  align-items: center;
+  text-align: center;
+}
+
+.qr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.qr-section canvas {
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0,255,255,0.4);
+}
+
+.qr-section p {
+  color: #e5e5e5;
+  font-size: 1.1em;
+}
+
+.qr-section a {
+  color: #00c3ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.qr-section a:hover {
+  text-decoration: underline;
+}
+#prevSlideBtn {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 50%;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.3;
+  z-index: 999;
+}
+
+#prevSlideBtn:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 15px #00ffff80;
+  transform: scale(1.05);
+}
+
 @keyframes pulse{0%,100%{opacity:0.3;}50%{opacity:1;}}
 @media(max-width:768px){h1{font-size:2.2rem;}ul{font-size:1.2rem;}}
