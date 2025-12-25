@@ -147,43 +147,63 @@ ul li:hover{color:#00ffff;transform:scale(1.05);transition:all 0.4s ease;}
   box-shadow: 0 0 15px #00ffff80;
   transform: scale(1.05);
 }
+/* ===== TEAM LIST (BIG AVATARS) ===== */
+
 .team-list {
   list-style: none;
   padding: 0;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .team-list li {
   display: flex;
   align-items: center;
-  gap: 20px;
-  margin-bottom: 1.5rem;
+  gap: 30px;
+  margin-bottom: 2rem;
   opacity: 0;
   transform: translateX(-30px);
-}
-
-.team-list img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #00ffff;
-  box-shadow:
-    0 0 15px rgba(0,255,255,0.6),
-    0 0 30px rgba(0,255,255,0.3);
   transition: transform 0.3s ease;
 }
 
+.team-list img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00ffff;
+  box-shadow:
+    0 0 30px rgba(0,255,255,0.7),
+    0 0 60px rgba(0,255,255,0.4);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
 .team-list li:hover img {
-  transform: scale(1.1);
+  transform: scale(1.15) rotate(2deg);
+  box-shadow:
+    0 0 40px #00ffff,
+    0 0 80px rgba(0,255,255,0.6);
 }
 
 .team-list span {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
   color: #e0e0e0;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .team-list img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .team-list span {
+    font-size: 1.1rem;
+  }
 }
 
 @keyframes pulse{0%,100%{opacity:0.3;}50%{opacity:1;}}
 @media(max-width:768px){h1{font-size:2.2rem;}ul{font-size:1.2rem;}}
+
 
 
