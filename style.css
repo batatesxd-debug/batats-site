@@ -12,7 +12,9 @@ body {
 }
 #bgCanvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;}
 .slides{position:relative;width:100%;height:100%;}
-.slide, .intro-slide{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) translateY(80px) rotateX(10deg);width:85%;max-width:900px;opacity:0;pointer-events:none;transition:opacity 1s ease, transform 1s ease;}
+.slide, .intro-slide{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) translateY(80px) rotateX(10deg);width:85%;max-width:900px;opacity:0;pointer-events:none;transition:opacity 1s ease, transform 1s ease;max-height: 90vh;
+  overflow-y: auto;}
 .slide.active, .intro-slide.active{opacity:1;transform:translate(-50%,-50%) translateY(0) rotateX(0deg);pointer-events:all;}
 .slide-box{
   backdrop-filter: blur(30px);
@@ -214,6 +216,7 @@ ul li:hover{color:#00ffff;transform:scale(1.05);transition:all 0.4s ease;}
 
 @keyframes pulse{0%,100%{opacity:0.3;}50%{opacity:1;}}
 @media(max-width:768px){h1{font-size:2.2rem;}ul{font-size:1.2rem;}}
+
 
 
 
